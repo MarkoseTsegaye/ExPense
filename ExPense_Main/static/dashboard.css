@@ -1,0 +1,183 @@
+.dashboard {
+    position: relative;
+    width: 100%;
+    
+    display: flex;
+}
+.overview {
+    color: white;
+    text-align: center; 
+    font-size: 70px;
+}
+
+.overviewContainer {
+    position: relative;
+    display: block;
+    align-items: center;
+    width: 30%;
+
+}
+
+.overviewContainer a{
+
+    margin:10px 10px;
+}
+
+
+.balanceContainer {
+    position:relative;
+    height:fit-content;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #282828;
+    filter: drop-shadow(0px 0px 8px #000000);
+    border-radius: 10px;
+    padding-bottom: 2px;
+
+
+
+}
+
+.incomeContainer {
+    position: relative;
+    height:fit-content;
+    max-width: 400px;
+    background-color: #282828;
+    filter: drop-shadow(0px 0px 8px #000000);
+    border-radius: 10px;
+    word-wrap: normal;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2px;
+
+    
+
+
+}
+.expenseContainer {
+    position: relative;
+    height:fit-content;
+    background-color: #282828;
+    filter: drop-shadow(0px 0px 8px #000000);
+    border-radius: 10px;
+    max-width: 400px;
+    
+    word-wrap: normal;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2px;
+
+
+}
+.expenseInfo {
+    text-align: center;
+    color:rgb(236, 141, 141);
+    font-size: 22px;
+    
+}
+.incomeInfo {
+    text-align: center;
+    color: cornflowerblue;
+    font-size: 22px;
+   
+    
+}
+
+.addContainer{
+
+    display: flex;
+    position: relative;
+    width:70%;
+    height:500px;
+    background-color: #121212;
+    border-radius: 40px;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    
+}
+
+
+.title{
+    color: white; 
+    text-align: center; 
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+
+
+.container {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 650px;
+    overflow: hidden;
+}
+
+
+
+.tab-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background-color: gray;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color:white;
+}
+
+.tab-btn.active {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.transaction-form {
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.transaction-form.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: cornflowerblue;
+}

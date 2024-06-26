@@ -1,0 +1,52 @@
+<html>
+  <head>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'main.css' %}" type="text/css" >
+
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
+    <script type="text/javascript" src="{% static 'main.js' %}"></script>
+  </head>
+  <body>
+    <center><div class="topMenuContainer">
+
+        <a class="otherTitles" href="/">Home</a>
+        <a class="expenseTitle" href="/"><b>ExPense</b></a>
+        <a class="otherTitles" href="features">Features</a>
+        
+      </div>
+      </center>
+    
+    
+
+    {% if user.is_authenticated %}
+    <h1 style="color: #3676e8; text-align: center; font-size: 70px"> Welcome {{user.username}}</h1>
+    <div class="mainMenuContainer">
+      <div class="mainMenu">
+        <a href="dashboard">Dashboard</a>
+        <a href="logout">Logout</a>
+
+        </div>
+      </div>
+    {% else %}
+    <h1 class="title">
+      <p style="color: #bdddfc; text-align: center; font-size: 70px">
+        A simple strategy
+      </p>
+      <p style="color: #bdddfc; text-align: center; font-size: 70px">
+        for handling your finances.
+      </p>
+    </h1>
+    
+    <div class="mainMenuContainer">
+      <div class="mainMenu">
+        <a href="login">Log In</a>
+        <a href="register">Sign Up</a>
+      </div>
+    </div>
+  {%endif%}
+    <div class="stats"></div>
+   
+    </form>
+  </body>
+</html>

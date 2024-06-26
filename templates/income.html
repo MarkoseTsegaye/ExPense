@@ -1,0 +1,23 @@
+<html>
+  <head>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'income.css' %}" />
+  </head>
+  <body>
+    <center>
+      <div class="topMenuContainer">
+        <a class="expenseTitle" href="/"><b>ExPense</b></a>
+
+        <a class="otherTitles" href="/">Home</a>
+        <a class="otherTitles" href="features">Features</a>
+      </div>
+    </center>
+    <div class="container">
+      <div class="incomeGraph">graph</div>
+      <div class="incomeHistory"></div>
+    </div>
+  </body>
+</html>

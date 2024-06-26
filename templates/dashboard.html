@@ -1,0 +1,163 @@
+<html>
+  <head>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'dashboard2.css' %}" />
+  </head>
+  <body>
+    <center>
+      <div class="topMenuContainer">
+        <a class="otherTitles" href="/">Home</a>
+        <a class="expenseTitle" href="/"><b>ExPense</b></a>
+        <a class="otherTitles" href="features">Features</a>
+        
+      </div>
+    </center>
+    <div class="dashboard">
+    <h1 class="overview">Overview</h1>
+      <div class="overviewContainer">
+        
+
+      
+        <div class="gridTile">
+          <div class="title">
+            <a href="income" class="title">Last Income</a>
+          </div>
+          {% for income in incomes %}
+          <h3 class="incomeInfo">
+            ${{income.amount}} - {{income.source}} - {{income.date}}
+          </h3>
+          {% endfor %}
+        </div>
+
+        <div class="gridTile">
+          <div class="title">
+            <a href="income" class="title" style="top:10%;">Last Expense</a>
+          </div>
+          {% for expense in expenses %}
+          <h3 class="expenseInfo">
+            ${{expense.amount}} - {{expense.category}} - {{expense.date}}
+          </h3>
+          {% endfor %}
+        </div>
+        <div class="gridTile">
+          <div class="title">
+            <a href="income" class="title">Balance</a>
+          </div>
+          <h3
+            class="balanceInfo"
+          >
+            ${{balance.balance}}
+          </h1>
+        </div>
+        <div class="gridTile">
+          <div class="title">
+            <a href="income" class="title">Total Expense</a>
+          </div>
+          
+          <h3 class="expenseInfo">
+            ${{monthlyExpense}}
+          </h3>
+          
+        </div>
+        <div class="gridTile">
+          <div class="title">
+            <a href="income" class="title">Total Income</a>
+          </div>
+          
+          <h3 class="incomeInfo">
+            ${{monthlyIncome}}
+          </h3>
+          
+        </div>
+
+
+      </div>
+      <div class="addContainer">
+        <div class="container">
+          <div class="tab-container">
+            <button class="tab-btn active" id="income-tab">Income</button>
+            <button class="tab-btn" id="expense-tab">Expense</button>
+          </div>
+          <form
+            id="income-form"
+            class="transaction-form active"
+            action="dashboard"
+            method="POST"
+          >
+            {%csrf_token %}
+            <input type="hidden" name="income" value="1" />
+            <input type="hidden" name="expense" value="0" />
+
+            <div class="form-group">
+              <label for="income-amount">Amount</label>
+              <input
+                type="number"
+                id="income-amount"
+                name="amount"
+                step="0.01"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="income-description">Source</label>
+              <input
+                type="text"
+                id="income-description"
+                name="source"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="income-description">Date and Time</label>
+              <input type="date" id="income-date" name="date" required />
+            </div>
+
+            <button type="submit">Submit Income</button>
+          </form>
+          <form
+            id="expense-form"
+            class="transaction-form"
+            action="dashboard"
+            method="POST"
+          >
+            {% csrf_token %}
+            <input type="hidden" name="expense" value="1" />
+            <input type="hidden" name="income" value="0" />
+
+            <div class="form-group">
+              <label for="expense-amount">Amount</label>
+              <input
+                type="number"
+                id="expense-amount"
+                name="amount"
+                step="0.01"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="expense-description">Category</label>
+              <select name="category">
+                <option value="Housing">Housing</option>
+                <option value="Food">Food</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Auto">Auto</option>
+                <option value="Insurance">Insurance</option>
+                <option value="Health">Health</option>
+                <option value="Loan">Loan</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="income-description">Date and Time</label>
+              <input type="date" id="income-date" name="date" required />
+            </div>
+            <button type="submit">Submit Expense</button>
+          </form>
+        </div>
+        <script src="{% static 'document.js' %}"></script>
+      </div>
+    </div>
+  </body>
+</html>

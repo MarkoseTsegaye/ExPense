@@ -1,0 +1,45 @@
+.title{
+    color: white; 
+    text-align: center; 
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.setupContainer{
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 200px;
+    background-color: #282828;
+    filter: drop-shadow(0px 2px 3px #000000);
+    border-radius: 25px;
+}
+.setBalanceButton{
+
+    width: 120px;
+    height: 50px;
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    text-align: center;
+    align-content: center;
+    color: white; 
+    text-align: center; 
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.inputBalance{
+    width:200px;
+    height:80px;
+    border-radius: 20px;
+
+}
+
+input{
+    color:black;
+    font-size: 40px;
+    text-align: center;
+}

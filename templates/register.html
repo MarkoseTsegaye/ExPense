@@ -1,0 +1,65 @@
+<html>
+  <head>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'main.css' %}" type="text/css" />
+
+    <link rel="stylesheet" href="{% static 'register.css' %}" />
+  </head>
+  <body>
+    <center>
+      <div class="topMenuContainer">
+        <a class="expenseTitle" href="/"><b>ExPense</b></a>
+
+        <a class="otherTitles" href="/">Home</a>
+        <a class="otherTitles" href="features">Features</a>
+        <a class="otherTitles" href="contact">Contact</a>
+        <a class="otherTitles" href="about">About us</a>
+      </div>
+    </center>
+
+    <div class="registerContainer">
+      <form method="POST" action="register" class="registerBox">
+        {% csrf_token %}
+
+        <h1>Register</h1>
+
+        {%for message in messages%}
+        <h4 style="color: red">{{message}}</h4>
+
+        {%endfor%}
+        <input
+          type="text"
+          name="username"
+          placeholder="Username"
+          autocomplete="off"
+        />
+
+        <input
+          type="text"
+          name="email"
+          placeholder="Email"
+          autocomplete="off"
+        />
+
+        <input
+          type="password"
+          name="password1"
+          placeholder="Password"
+          autocomplete="off"
+        />
+
+        <input
+          type="password"
+          name="password2"
+          placeholder="Confirm Password"
+          autocomplete="off"
+        />
+
+        <input type="submit" text="Login" />
+      </form>
+    </div>
+  </body>
+</html>
+
+=

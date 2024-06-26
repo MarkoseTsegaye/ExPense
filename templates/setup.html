@@ -1,0 +1,28 @@
+<html>
+  <head>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'setup.css' %}" />
+  </head>
+  <body>
+    <center>
+      <div class="topMenuContainer">
+        <a class="otherTitles" href="/">Home</a>
+        <a class="expenseTitle" href="/"><b>ExPense</b></a>
+        <a class="otherTitles" href="features">Features</a>
+      </div>
+    </center>
+    <h1 class="title">Lets setup your account!</h1>
+    <center>
+      <div class="setupContainer">
+        <form method="POST" action="setup" class="setupBox">
+          {% csrf_token %}
+          <input class="inputBalance" name="balance" placeholder="Balance" />
+          <button type="submit" class="setBalanceButton">Set Balance</button>
+        </form>
+      </div>
+    </center>
+  </body>
+</html>

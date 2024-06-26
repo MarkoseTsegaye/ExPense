@@ -1,0 +1,59 @@
+<html>
+  <head>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'features.css' %}" />
+  </head>
+  <body>
+    <center>
+      <div class="topMenuContainer">
+        <a class="otherTitles" href="/">Home</a>
+        <a class="expenseTitle" href="/"><b>ExPense</b></a>
+        <a class="otherTitles" href="features">Features</a>
+      </div>
+    </center>
+
+    <h1 class="title">Features</h1>
+    <div class="featuresContainer">
+      <div class="features">
+        <div class="featureImages">
+          <img src="{% static 'money.png' %}" />
+        </div>
+        <h6 class="title2">
+          By carefully budgeting your money, you can ensure you meet all your
+          financial goals each month.
+        </h6>
+      </div>
+
+      <div class="features">
+        <div class="featureImages">
+          <img src="{% static 'growth.png' %}" />
+        </div>
+        <h6 class="title2">
+          Regularly reviewing your budget allows you to identify areas for
+          potential savings and growth in your finances.
+        </h6>
+      </div>
+      <div class="features">
+        <div class="featureImages">
+          <img src="{% static 'budget.png' %}" />
+        </div>
+        <h6 class="title2">
+          Using a detailed budget to outline your monthly expenses and income
+          can provide a clear picture of your financial health
+        </h6>
+      </div>
+      <div class="features">
+        <div class="featureImages">
+          <img src="{% static 'notes.png' %}" />
+        </div>
+        <h6 class="title2">
+          It's essential to maintain tracking of your spending habits to stay on
+          budget and make adjustments as needed
+        </h6>
+      </div>
+    </div>
+  </body>
+</html>

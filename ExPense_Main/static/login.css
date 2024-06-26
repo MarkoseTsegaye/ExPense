@@ -1,0 +1,26 @@
+
+.loginContainer {
+    color:#3676E8;
+    width:100%;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    top:10px;
+}
+.loginBox{
+    width: 60vw;
+    height: 360px;
+    background-color: #282828;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    filter: drop-shadow(0px 0px 10px #000000);
+    border-radius: 25px;
+
+}
+.title {
+    position: relative;
+    font-size: 1rem;
+    
+}

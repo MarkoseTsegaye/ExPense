@@ -1,0 +1,168 @@
+.dashboard {
+    position: relative;
+    width: 100%;
+    
+    display: block;
+}
+.overview {
+    color: white;
+    text-align: center; 
+    font-size: 5vw;;
+}
+
+.overviewContainer {
+    position: relative;
+    display: grid;
+    background-color: #121212;
+    
+    grid-auto-rows: max-content;
+    grid-auto-columns: 20%;
+    grid-auto-flow: column;
+    
+    
+
+   
+
+}
+
+
+
+
+.gridTile {
+    position:relative;
+    display: block;
+    margin: 10px;
+    max-width: 100%;
+    max-height: min-content;
+    grid-auto-flow: column;
+    grid-area: 2 2 2 2 ;
+    background-color: #282828;
+    filter: drop-shadow(0px 0px 8px #000000);
+    transition: all .3s;
+
+}
+.gridTile:hover{
+    background-color: #464646;
+    transform: scale(1.04);
+}
+
+
+.balanceInfo {
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-size: 2vw;
+    top:10%;
+    
+}
+.expenseInfo {
+    text-align: center;
+    color:rgb(236, 141, 141);
+    font-size: 2vw;
+    top:10%;
+    
+}
+.incomeInfo {
+    text-align: center;
+    color: cornflowerblue;
+    font-size: 2vw;
+   
+    
+}
+
+.addContainer{
+
+    display: flex;
+    position: relative;
+    width:70%;
+    height:500px;
+    float: right;
+    border-radius: 40px;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    
+}
+
+
+.title{
+    color: white; 
+    text-align: center; 
+    font-size: 2vw;
+    text-decoration: None;
+}
+
+
+
+.container {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 650px;
+    overflow: hidden;
+}
+
+
+
+.tab-container {
+    display: flex;
+    
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background-color: gray;
+    border: none;
+    
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color:white;
+}
+
+.tab-btn.active {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.transaction-form {
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.transaction-form.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: cornflowerblue;
+}
